@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: n8n-server
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: N8N_HOST
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
